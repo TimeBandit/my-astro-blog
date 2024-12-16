@@ -180,6 +180,10 @@
   content: "\f09e";
 }
 
+.fa-envelope::before {
+  content: "\f0e0";
+}
+
 .sr-only,
 .fa-sr-only {
   position: absolute;
