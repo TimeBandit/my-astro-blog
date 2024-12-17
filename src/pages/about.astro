@@ -1,0 +1,43 @@
+---
+import { Picture } from "astro:assets";
+import myImage from "../assets/about-photo.jpg";
+import PageMeta from "../components/PageMeta.astro";
+import { SITE_TITLE } from "../config";
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <PageMeta title={`Projects | ${SITE_TITLE}`} slot="meta" />
+  <section slot="main">
+    <section id="about">
+      <Picture
+        src={myImage}
+        formats={["avif", "webp"]}
+        alt="A photo of Imran in nature."
+      />
+      
+      <br />
+      <p class="text">
+        Welcome! I’m Imran, a seasoned full-stack developer passionate
+        about building innovative and efficient web solutions. With expertise in
+        React, TypeScript, and Node.js, I specialize in creating scalable
+        applications and workflow tools that leverage the power of AWS
+        infrastructure.
+      </p>
+      <br />
+
+      <p class="text">
+        Over the years, I’ve worked with clients across various industries to design
+      and deliver software solutions tailored to their unique needs. Most recently I worked with    <a href="https://www.dunelm.com/">Dunelm</a> and <a href="https://www.selfridges.com/GB/en/">Selfridges</a> to help migrate their infrastrue into the cloud.
+      </p>
+      
+    </section>
+    <br />
+
+    <p class="text">
+      When I’m not coding, you’ll find me cooking, hiking or learning to draw.
+      A late bloomer in life from an inner-city background I've strived to further
+      myself through constant learning and physical fitness.
+    </p>
+  </section>
+</PageLayout>
