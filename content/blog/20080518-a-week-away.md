@@ -8,7 +8,9 @@ date: 2008-05-18
 
 I’ve always been a light sleeper. The slightest disturbance in my surroundings will alert me and open my eyes. The thought of a long journey compounds the problem making me restless. I guess that makes me a worrier. I’ll totter around and ruminate about the travel till around bed time and then decide to pack by starting with a list. This night was different, I tried not stress by seeing friends and packing on the morning of travel which went ok since I already had my trusty notes on what to take.
 
-![Blogster](~/../../src/assets/a-week-away-1.JPG)
+![Blogster](/images/blogster.png)
+
+![Blogster](/src/assets/a-week-away-2-20080518.JPG)
 
 Fortunately for me I live near the airport so I decided to walk to the terminal. Unfortunately for me, the brand new bag I had bought from Milton Keynes the weekend before had no wheels, so I carried it over my shoulder. Simple enough I thought, but it was a warm day and partly uphill. When I got to the terminal I was knackered and sweating.
 
