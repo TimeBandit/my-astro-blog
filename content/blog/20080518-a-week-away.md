@@ -52,3 +52,8 @@ Our evenings were warm and pleasant and I often stepped out to breathe the sweet
 >
 
 ![Blogster](/src/assets/a-week-away-9-20080518.JPG)
+
+<Picture
+  src="/src/assets/a-week-away-9-20080518.JPG"
+  alt="test"
+/>
