@@ -20,7 +20,7 @@ export interface Props {
 }
 
 const { title, date } = Astro.props;
-console.log("formatting date");
+
 const formattedDate = new Date(date).toLocaleDateString("en-us", {
   year: "numeric",
   month: "short",
@@ -45,7 +45,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
   <body class="min-h-screen max-w-3xl mx-auto px-6 sm:px-8">
     <Header />
     <main id="main">
-      {console.log("rendered")}
       <section class="blog-post prose max-w-none prose-sleek">
         <h1 class="m-0 mb-[0.25em]">{title}</h1>
         <time class="block mb-[2em] text-text-muted">{formattedDate}</time>
