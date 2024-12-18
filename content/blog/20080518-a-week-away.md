@@ -51,9 +51,5 @@ Our evenings were warm and pleasant and I often stepped out to breathe the sweet
 > Walking up a mountain track, I fell to thinking. Approach everything rationally, and you become harsh. Pole along in the stream of emotions, and you will be swept away by the current. Give free rein to your desires, and you become uncomfortably confined. It is not a very agreeable place to live, this world of ours.’ - Natsume Soseki, The Three-Cornered World.
 >
 
-![Blogster](/src/assets/a-week-away-9-20080518.JPG)
-
-<Picture
-  src="/src/assets/a-week-away-9-20080518.JPG"
-  alt="test"
-/>
+![Blogster](../src/assets/a-week-away-9-20080518.JPG)
+![Blogster](../src/images/a-week-away-9-20080518.JPG)
