@@ -2,7 +2,10 @@
 external: false
 draft: false
 title: HTMX in 100 Words
-description: Learn HTMX in one hundred words
+description: HTMX in one hundred words
+url: https://www.imran-nazir.com/blog/htmx-in-100-words
+image: https://www.imran-nazir.com/images/htmx-in-100-words.png
+imageAlt: A stylised HTMX logo graphic
 date: 2025-03-12
 tags: tech, framework, htmx
 ---
