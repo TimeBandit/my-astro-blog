@@ -7,6 +7,8 @@ date: 2025-03-12
 tags: tech, framework, htmx
 ---
 
+![Blogster](/images/htmx-in-100-words.png)
+
 [HTMX](https://htmx.org/) is a lightweight JavaScript library that lets you access modern browser features directly from HTML, without writing JavaScript. It allows you to fire HTTP methods from any HTML elements and to receive and insert HTML snippets sent my the server.
 
 Core concepts:
