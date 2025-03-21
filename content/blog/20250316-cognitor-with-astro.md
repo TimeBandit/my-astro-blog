@@ -67,6 +67,6 @@ Setting up Cognito is fairly straightforward, but there are a few concepts to ge
    - In my Todos app, the callback URL is the /callback page, and the sign-out URL is the homepage.
    - You can see that i've also added url for development at localhost. This is important!
 
-![Login Configuration](/public/images/cognito-in-astro/login-page-config.png)
+![Login Configuration](/images/cognito-in-astro/login-page-config.png)
 
 Once Cognito is set up, you can handle the result of a successful login in the /callback page. The code snippet above imports a userManager object. This code comes directly from the Cognito setup steps.
