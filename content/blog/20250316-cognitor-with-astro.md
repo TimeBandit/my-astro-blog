@@ -69,4 +69,4 @@ Setting up Cognito is fairly straightforward, but there are a few concepts to ge
 
 ![Login Configuration](/images/cognito-in-astro/login-page-config.png)
 
-Once Cognito is set up, you can handle the result of a successful login in the /callback page. The code snippet above imports a userManager object. This code comes directly from the Cognito setup steps.
+Once Cognito is set up, you can handle the result of a successful login in the `/callback` page. The code snippet above imports a userManager object. This code comes directly from the Cognito setup steps.
