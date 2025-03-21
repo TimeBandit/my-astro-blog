@@ -30,10 +30,22 @@ import Footer from "../components/Footer.astro";
     <ThemeScript />
     <FontAwesome />
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WDQPYRHTZG"></script>
+<script>
+  declare global {
+    interface Window {
+        dataLayer:any;
+    }
+  }
 
-  <body
-    class="min-h-screen max-w-3xl mx-auto px-6 sm:px-8"
-  >
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WDQPYRHTZG');
+  </script>
+  
+  <body class="min-h-screen max-w-3xl mx-auto px-6 sm:px-8">
     <Header />
     <main id="main">
       <slot name="main" />
