@@ -3,6 +3,14 @@
   "display": "theme/sleek",
   "compilerOptions": {
     "types": ["astro/client"],
-    "baseUrl": "."
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@/*": ["./src/*"]
+    }
   }
 }

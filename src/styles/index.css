@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 330 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+
+    --radius: 0rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 330 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 100% 50%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 0 0% 70%;
+
+    --sidebar-background: 0 0% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 30%;
+    --sidebar-ring: 0 0% 70%;
+  }
+
+  * {
+    @apply border-border selection:bg-brutalist-pink selection:text-brutalist-black;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  p, li {
+    @apply max-w-prose mx-auto;
+  }
+
+  .brutalist-text-shadow {
+    @apply text-shadow-black dark:text-shadow-white;
+  }
+
+  .brutalist-box-shadow {
+    @apply shadow-[5px_5px_0_#000] dark:shadow-[5px_5px_0_#fff];
+  }
+
+  .brutalist-section {
+    @apply mb-20 md:mb-20 sm:mb-16 border-4 border-brutalist-black dark:border-brutalist-white p-4 sm:p-5 md:p-6 brutalist-box-shadow bg-white dark:bg-brutalist-dark;
+  }
+
+  .brutalist-button {
+    @apply font-bold py-2 sm:py-3 px-4 sm:px-6 border-4 border-brutalist-black dark:border-brutalist-white 
+           bg-brutalist-pink text-brutalist-black brutalist-box-shadow 
+           hover:translate-y-1 hover:translate-x-1 
+           hover:shadow-[3px_3px_0_#000] dark:hover:shadow-[3px_3px_0_#fff] transition-all
+           active:translate-y-2 active:translate-x-2 
+           active:shadow-none;
+  }
+
+  .brutalist-marker {
+    @apply font-brutalist text-3xl sm:text-4xl md:text-6xl 
+          text-brutalist-pink brutalist-text-shadow
+          -rotate-6 inline-block my-3 sm:my-4;
+  }
+}
+
+@layer utilities {
+  /* Text shadow utilities */
+  .text-shadow-black {
+    text-shadow: 3px 3px 0 #000;
+  }
+
+  .text-shadow-white {
+    text-shadow: 3px 3px 0 #fff;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.scroll-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scroll-marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brutalist-section {
+    @apply mb-10 p-4;
+  }
+  
+  .brutalist-marker {
+    @apply text-2xl sm:text-3xl;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+  
+  .text-shadow-black, .text-shadow-white {
+    text-shadow: 2px 2px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .brutalist-section {
+    @apply mb-8 p-3;
+  }
+  
+  .brutalist-box-shadow {
+    @apply shadow-[3px_3px_0_#000] dark:shadow-[3px_3px_0_#fff];
+  }
+}
+
+/* Dark mode transitions */
+:root {
+  --transition-duration: 0.3s;
+}
+
+* {
+  transition: background-color var(--transition-duration) ease,
+              border-color var(--transition-duration) ease,
+              color var(--transition-duration) ease,
+              box-shadow var(--transition-duration) ease;
+}

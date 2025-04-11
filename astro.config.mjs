@@ -3,6 +3,8 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 
+import react from "@astrojs/react";
+
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
   In local development, your SEO meta tags will have localhost URL.
@@ -30,10 +32,7 @@ if (isBuild) {
 export default defineConfig({
   server: { port: SERVER_PORT },
   site: BASE_URL,
-  integrations: [
-    sitemap(),
-    tailwind({
-      config: { applyBaseStyles: false },
-    }),
-  ],
+  integrations: [sitemap(), tailwind({
+    config: { applyBaseStyles: false },
+  }), react()],
 });
