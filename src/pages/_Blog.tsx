@@ -1,7 +1,7 @@
 // import { blogPosts } from '../data/blogPosts';
 import type { RenderableTreeNode } from "@markdoc/markdoc";
 import BlogPostCard from "../components/BlogPostCard";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer.astro";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const Blog = ({

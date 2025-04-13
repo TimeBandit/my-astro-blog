@@ -1,52 +1,68 @@
 ---
+import { Github, Linkedin, Mail } from "lucide-react";
 ---
 
-<footer class="text-sm leading-[1.75] mt-4">
-  <div>
-    This blog is built with 
-    <a
-      class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f57111] to-[#f79605] hover:after:bg-gradient-to-r hover:after:from-[#f57111] hover:after:to-[#f79605]"
-      href={"https://github.com/flexdinesh/blogster"}
-      target="_blank"
+<footer
+  class="bg-brutalist-black text-brutalist-white py-8 md:py-12 px-4 md:px-6 mt-12 md:mt-16"
+>
+  <div class="max-w-6xl mx-auto">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8"
     >
-      Blogster</a> and hosted in
-    <a
-      class="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00abda] to-[#1476ff] hover:after:bg-gradient-to-r hover:after:from-[#00abda] hover:after:to-[#1476ff]"
-      href={"https://www.netlify.com"}
-      target="_blank"
+      <div>
+        <a href="/" class="text-2xl md:text-3xl font-brutalist">
+          PINK LLAMA
+        </a>
+      </div>
+
+      <nav
+        class="flex flex-wrap justify-center gap-4 md:gap-8 text-lg md:text-xl"
+      >
+        <a href="/" class="hover:text-brutalist-pink transition-colors">
+          Home
+        </a>
+        <a
+          href="/projects"
+          class="hover:text-brutalist-pink transition-colors"
+        >
+          Projects
+        </a>
+        <a href="/blog" class="hover:text-brutalist-pink transition-colors">
+          Blog
+        </a>
+      </nav>
+
+      <div class="flex gap-6">
+        <a
+          href="https://github.com"
+          class="text-white hover:text-brutalist-pink"
+          aria-label="GitHub"
+        >
+          <Github size={24} />
+        </a>
+        <a
+          href="https://linkedin.com"
+          class="text-white hover:text-brutalist-pink"
+          aria-label="LinkedIn"
+        >
+          <Linkedin size={24} />
+        </a>
+        <a
+          href="mailto:imran@pinkllama.dev"
+          class="text-white hover:text-brutalist-pink"
+          aria-label="Email"
+        >
+          <Mail size={24} />
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="mt-8 md:mt-12 text-center text-brutalist-white/70 text-sm md:text-base"
     >
-      Netlify</a>.
+      <p>
+        © {new Date().getFullYear()} Pink Llama Software. All rights reserved.
+      </p>
+    </div>
   </div>
 </footer>
-
-<style>
-  footer {
-    grid-area: footer;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .gradient-link {
-    position: relative;
-    box-decoration-break: clone;
-    text-decoration: none;
-  }
-
-  .gradient-link:hover:after {
-    transform: translateZ(0) scale(1);
-  }
-
-  .gradient-link:after {
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    content: "";
-    height: 2px;
-    position: absolute;
-    transform: translateZ(0) scaleX(0);
-    transform-origin: left center;
-    transition: all 0.15s ease-in-out;
-  }
-</style>

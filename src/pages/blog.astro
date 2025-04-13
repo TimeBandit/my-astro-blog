@@ -24,7 +24,7 @@ console.log("sortedPosts", sortedPosts);
 
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
-    <BlogComponent slot="content" sortedPosts={sortedPosts} client:only/>
+    <BlogComponent slot="content" sortedPosts={sortedPosts}/>
     <!-- <ul>
       {
         sortedPosts.map((post) => {
