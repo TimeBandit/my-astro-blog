@@ -7,9 +7,9 @@ import PageLayout from "../layouts/PageLayout.astro";
 
 <PageLayout>
   <PageMeta title={`${SITE_TITLE} | Web Ninja`} slot="meta" />
-  <Fragment slot="main">
+  <!-- <Fragment > -->
     <!-- <Intro />
     <AboutTheTheme /> -->
-    <App client:only/>
-  </Fragment>
+    <App slot="content" client:only/>
+  <!-- </Fragment> -->
 </PageLayout>

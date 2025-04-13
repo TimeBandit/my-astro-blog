@@ -27,13 +27,11 @@ import Favicon from "./Favicon.astro";
     <!-- <FontAwesome /> -->
   </head>
 
-  <body
-    
-  >
+  <body>
     <!-- <Header /> -->
-    <main id="main">
-      <slot name="main" />
-    </main>
+    <Fragment>
+      <slot name="content" />
+    </Fragment>
     <!-- <Footer /> -->
   </body>
 </html>

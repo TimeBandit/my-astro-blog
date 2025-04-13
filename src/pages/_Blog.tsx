@@ -1,11 +1,18 @@
+// import { blogPosts } from '../data/blogPosts';
+import type { RenderableTreeNode } from "@markdoc/markdoc";
+import BlogPostCard from "../components/BlogPostCard";
+import Footer from "../components/Footer";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
-import React from 'react';
-import { blogPosts } from '../data/blogPosts';
-import BlogPostCard from '../components/BlogPostCard';
-import Footer from '../components/Footer';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-
-const Blog = () => {
+const Blog = ({
+  sortedPosts,
+}: {
+  sortedPosts: {
+    slug: string;
+    content: RenderableTreeNode;
+    frontmatter: any;
+  }[];
+}) => {
   useScrollAnimation();
 
   return (
@@ -24,8 +31,8 @@ const Blog = () => {
       <main className="flex-grow max-w-6xl mx-auto px-6">
         <section className="brutalist-section reveal">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.map((post) => (
-              <div key={post.id} className="reveal">
+            {sortedPosts.map((post, index) => (
+              <div key={index} className="reveal">
                 <BlogPostCard post={post} />
               </div>
             ))}

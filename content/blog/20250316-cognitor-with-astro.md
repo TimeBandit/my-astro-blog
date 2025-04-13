@@ -7,7 +7,7 @@ url: https://www.imran-nazir.com/blog/cognito-with-atro
 image: https://www.imran-nazir.com/images/cognito-in-astro.png
 imageAlt: A stylised HTMX logo graphic
 date: 2025-03-16
-tags: tech, framework, astro
+tags: ["tech", "framework", "astro"]
 ---
 
 ![Illustration](/images/cognito-in-astro.png)

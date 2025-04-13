@@ -4,6 +4,7 @@ draft: false
 title: A week away in Spain
 description: A week away in Spain
 date: 2008-05-18
+tage: ["travel"]
 ---
 
 I’ve always been a light sleeper. The slightest disturbance in my surroundings will alert me and open my eyes. The thought of a long journey compounds the problem making me restless. I guess that makes me a worrier. I’ll totter around and ruminate about the travel till around bed time and then decide to pack by starting with a list. This night was different, I tried not stress by seeing friends and packing on the morning of travel which went ok since I already had my trusty notes on what to take.
@@ -12,7 +13,7 @@ I’ve always been a light sleeper. The slightest disturbance in my surroundings
 
 Fortunately for me I live near the airport so I decided to walk to the terminal. Unfortunately for me, the brand new bag I had bought from Milton Keynes the weekend before had no wheels, so I carried it over my shoulder. Simple enough I thought, but it was a warm day and partly uphill. When I got to the terminal I was knackered and sweating.
 
-One of the idiosyncrasies of the new airport security regulations is that you cannot take any fluids aboard with you, which is fine. Ask them for a last swig of your drink before they condemn it to the bin and they won’t let you?*!
+One of the idiosyncrasies of the new airport security regulations is that you cannot take any fluids aboard with you, which is fine. Ask them for a last swig of your drink before they condemn it to the bin and they won’t let you?\*!
 
 Did you know, that statistically air travel is supposed to be the safest way to go from A to B. To me though, it also means, fly more and you increase your chances of being on that plane that doesn’t make it. I know, this could even happen in a car, the problem is that in a plane you hand over your safety to another driver; the anonymous pilot, it a matter of trust. Every bit of noise or air turbulence made me wince and curl up, so chatting to the lady across the aisle form me (Anna) helped me to chill out. We blabbered for nearly and hour and she even gave me one of her babies to hold while she cleaned up the puke of the other.
 
@@ -47,4 +48,3 @@ The next two days were pretty much the same story. It started with an early rise
 Our evenings were warm and pleasant and I often stepped out to breathe the sweet air and stare at the moon before I popped back in to join in with the conversations that were taking place. I was making new friends with people who shared a common interest and getting to know people from differing backgrounds. We would go out for an evening stroll and an ice cream before heading back to the apartments. I spent the last day in the village and the beach. My body had reached the point of no return, it was telling me to taking it easy, or else!
 
 > Walking up a mountain track, I fell to thinking. Approach everything rationally, and you become harsh. Pole along in the stream of emotions, and you will be swept away by the current. Give free rein to your desires, and you become uncomfortably confined. It is not a very agreeable place to live, this world of ours.’ - Natsume Soseki, The Three-Cornered World.
->
