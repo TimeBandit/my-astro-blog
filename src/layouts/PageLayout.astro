@@ -12,10 +12,26 @@ import Favicon from "./Favicon.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content="Blogster" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <Favicon />
     <slot name="meta" />
-  </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDQPYRHTZG"
+    ></script><script>
+      declare global {
+        interface Window {
+          dataLayer: any;
+        }
+      }
 
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-WDQPYRHTZG");
+    </script></head
+  >
   <body>
     <div class="min-h-screen flex flex-col">
       <slot name="header" />

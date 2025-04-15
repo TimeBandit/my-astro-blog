@@ -11,7 +11,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
     >
       <div>
         <a href="/" class="text-2xl md:text-3xl font-brutalist">
-          PINK LLAMA
+          Imran Nazir
         </a>
       </div>
 
@@ -21,12 +21,12 @@ import { Github, Linkedin, Mail } from "lucide-react";
         <a href="/" class="hover:text-brutalist-pink transition-colors">
           Home
         </a>
-        <a
+        <!-- <a
           href="/projects"
           class="hover:text-brutalist-pink transition-colors"
         >
           Projects
-        </a>
+        </a> -->
         <a href="/blog" class="hover:text-brutalist-pink transition-colors">
           Blog
         </a>
@@ -34,23 +34,28 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
       <div class="flex gap-6">
         <a
-          href="https://github.com"
+          href="https://github.com/TimeBandit"
           class="text-white hover:text-brutalist-pink"
           aria-label="GitHub"
-        >
+          target="_blank"
+          rel="noopener noreferrer"
+          >
           <Github size={24} />
-        </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/i8r"
           class="text-white hover:text-brutalist-pink"
           aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Linkedin size={24} />
         </a>
         <a
-          href="mailto:imran@pinkllama.dev"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdD3pETz1ERcOPQYpDamjTTKQQ9zGc2UQfrsFlZe3Blzu9m4g/viewform?usp=dialog"
           class="text-white hover:text-brutalist-pink"
           aria-label="Email"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Mail size={24} />
         </a>
@@ -61,7 +66,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
       class="mt-8 md:mt-12 text-center text-brutalist-white/70 text-sm md:text-base"
     >
       <p>
-        © {new Date().getFullYear()} Pink Llama Software. All rights reserved.
+        © {new Date().getFullYear()} Imran Nazir Software. All rights reserved.
       </p>
     </div>
   </div>
