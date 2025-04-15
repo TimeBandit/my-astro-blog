@@ -1,0 +1,41 @@
+---
+import type { BlogPostCardProps } from "@/types";
+
+// import { BlogPost } from '../data/blogPosts';
+
+
+// destructure title, date, description, tags
+// console.log('**: ',Astro.props);
+const { post } = Astro.props as {post: BlogPostCardProps};
+const { title, date, description, tags } = post.frontmatter;
+const { slug } = post;
+console.table({ title, date, description, tags, slug } )
+
+---
+
+<article
+  class="border-4 border-brutalist-black p-6 brutalist-box-shadow bg-white hover:translate-y-1 hover:translate-x-1 hover:shadow-[3px_3px_0_#000] transition-all"
+>
+  <div class="mb-2">
+    {
+      tags.map((tag: string) => (
+        <span
+          class="inline-block bg-brutalist-yellow border-2 border-brutalist-black px-2 py-1 text-sm mr-2 mb-2"
+        >
+          {tag}
+        </span>
+      ))
+    }
+  </div>
+
+  <h3 class="text-2xl font-bold mb-2">{title}</h3>
+  <p class="text-sm mb-4">Published on {(new Date(date)).toLocaleDateString()}</p>
+  <p class="mb-4">{description}</p>
+
+  <a
+    href={`/blog/${slug}`}
+    class="inline-block font-bold py-2 px-4 border-2 border-brutalist-black bg-brutalist-blue text-brutalist-black hover:bg-brutalist-pink transition-colors"
+  >
+    Read More →
+  </a>
+</article>

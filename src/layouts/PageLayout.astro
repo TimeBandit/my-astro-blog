@@ -1,13 +1,5 @@
 ---
-/* 
-  This layout is used in 
-  - pages/index.astro
-  - pages/blog.astro
-  - pages/projects.astro
-*/
-
-// Import the global.css file here so that it is included on
-// import "../styles/global.css"; // the original file
+import Footer from "@components/Footer.astro";
 import "../styles/index.css"; // the new file created by loveable
 
 import Favicon from "./Favicon.astro";
@@ -22,16 +14,13 @@ import Favicon from "./Favicon.astro";
     <meta name="generator" content="Blogster" />
     <Favicon />
     <slot name="meta" />
-    <!-- <GoogleFont /> -->
-    <!-- <ThemeScript /> -->
-    <!-- <FontAwesome /> -->
   </head>
 
   <body>
-    <!-- <Header /> -->
-    <Fragment>
-      <slot name="content" />
-    </Fragment>
-    <!-- <Footer /> -->
+    <div class="min-h-screen flex flex-col">
+      <slot name="header" />
+      <slot name="main" />
+      <Footer />
+    </div>
   </body>
 </html>

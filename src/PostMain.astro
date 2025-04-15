@@ -1,0 +1,19 @@
+---
+import Renderer from "@components/Renderer.astro";
+const { description, content } = Astro.props;
+---
+
+<main class="flex-grow max-w-4xl mx-auto px-6" slot="main">
+  <article class="brutalist-section">
+    <p class="text-xl font-bold mb-6">
+      {description}
+    </p>
+    <div class="prose prose-lg max-w-none post-content">
+      <Renderer content={content} />
+    </div>
+  </article>
+
+  <div class="text-center mt-12 mb-16">
+    <a href="/blog" class="brutalist-button inline-block"> Back to All Posts</a>
+  </div>
+</main>

@@ -4,7 +4,7 @@ draft: false
 title: A week away in Spain
 description: A week away in Spain
 date: 2008-05-18
-tage: ["travel"]
+tags: ["travel"]
 ---
 
 I’ve always been a light sleeper. The slightest disturbance in my surroundings will alert me and open my eyes. The thought of a long journey compounds the problem making me restless. I guess that makes me a worrier. I’ll totter around and ruminate about the travel till around bed time and then decide to pack by starting with a list. This night was different, I tried not stress by seeing friends and packing on the morning of travel which went ok since I already had my trusty notes on what to take.

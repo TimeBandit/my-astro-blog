@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -98,7 +97,8 @@
     @apply scroll-smooth;
   }
 
-  p, li {
+  p,
+  li {
     @apply max-w-prose mx-auto;
   }
 
@@ -112,6 +112,17 @@
 
   .brutalist-section {
     @apply mb-20 md:mb-20 sm:mb-16 border-4 border-brutalist-black dark:border-brutalist-white p-4 sm:p-5 md:p-6 brutalist-box-shadow bg-white dark:bg-brutalist-dark;
+  }
+
+  .post-content * + * {
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal list-inside;
   }
 
   .brutalist-button {
@@ -153,8 +164,12 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .scroll-marquee {
@@ -172,20 +187,21 @@
   .brutalist-section {
     @apply mb-10 p-4;
   }
-  
+
   .brutalist-marker {
     @apply text-2xl sm:text-3xl;
   }
-  
+
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl;
   }
-  
+
   h2 {
     @apply text-3xl sm:text-4xl;
   }
-  
-  .text-shadow-black, .text-shadow-white {
+
+  .text-shadow-black,
+  .text-shadow-white {
     text-shadow: 2px 2px 0;
   }
 }
@@ -194,7 +210,7 @@
   .brutalist-section {
     @apply mb-8 p-3;
   }
-  
+
   .brutalist-box-shadow {
     @apply shadow-[3px_3px_0_#000] dark:shadow-[3px_3px_0_#fff];
   }
@@ -207,7 +223,7 @@
 
 * {
   transition: background-color var(--transition-duration) ease,
-              border-color var(--transition-duration) ease,
-              color var(--transition-duration) ease,
-              box-shadow var(--transition-duration) ease;
+    border-color var(--transition-duration) ease,
+    color var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease;
 }

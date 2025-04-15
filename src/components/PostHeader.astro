@@ -1,0 +1,29 @@
+---
+const { title, date, tags } = Astro.props;
+---
+
+<div class="bg-brutalist-blue py-10 mb-12">
+  <div class="max-w-4xl mx-auto px-6">
+    <button> ← Back</button>
+    <h1 class="text-4xl md:text-6xl font-brutalist brutalist-text-shadow">
+      {title}
+    </h1>
+    <p class="mt-4">Published on {date}</p>
+    <div class="mt-4">
+      {
+        tags.map((tag: string) => (
+          <span class="inline-block bg-brutalist-yellow border-2 border-brutalist-black px-2 py-1 text-sm mr-2 mb-2">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</div>
+<script>
+  const button = document.querySelector("button");
+  button &&
+    button.addEventListener("click", () => {
+      window.history.back();
+    });
+</script>

@@ -1,0 +1,20 @@
+---
+import type { BlogPostCardProps } from "@/types";
+import BlogPostCard from "./BlogPostCard.astro";
+
+const {posts} = Astro.props as {posts: BlogPostCardProps[]};
+---
+
+<main class="flex-grow max-w-6xl mx-auto px-6">
+  <section class="brutalist-section reveal">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {
+        posts.map((post) => (
+          <div class="reveal">
+            <BlogPostCard post={post} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</main>

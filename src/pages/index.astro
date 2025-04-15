@@ -1,15 +1,13 @@
 ---
+import IndexHeader from "@components/IndexHeader.astro";
+import IndexMain from "@components/IndexMain.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
-import IndexPage from "./_Index.astro";
 ---
 
 <PageLayout>
   <PageMeta title={`${SITE_TITLE} | Web Ninja`} slot="meta" />
-  <!-- <Fragment > -->
-    <!-- <Intro />
-    <AboutTheTheme /> -->
-    <IndexPage slot="content"/>
-  <!-- </Fragment> -->
+  <IndexHeader slot="header" />
+  <IndexMain slot="main" />
 </PageLayout>

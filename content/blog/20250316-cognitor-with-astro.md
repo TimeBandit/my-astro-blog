@@ -1,6 +1,6 @@
 ---
 external: false
-draft: true
+draft: false
 title: How to Use AWS Cognito in Your Next Astro Project
 description: An overview of using AWS Cognito with you Astro app.
 url: https://www.imran-nazir.com/blog/cognito-with-atro
