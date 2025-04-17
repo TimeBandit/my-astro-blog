@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    /* Colors */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
@@ -44,6 +45,21 @@
     --sidebar-accent-foreground: 0 0% 0%;
     --sidebar-border: 0 0% 0%;
     --sidebar-ring: 0 0% 0%;
+
+    /* Spacings */
+    --ratio: 1.5;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+    --border-thin: var(--s-4);
   }
 
   .dark {
@@ -100,6 +116,7 @@
   p,
   li {
     @apply max-w-prose mx-auto;
+    max-width: 65ch;
   }
 
   .brutalist-text-shadow {
@@ -149,6 +166,41 @@
 
   .text-shadow-white {
     text-shadow: 3px 3px 0 #fff;
+  }
+}
+
+@layer components {
+  /* Layout containers */
+  .stack > * + * {
+    /* ↓ The gap between elements is the first point on the modular scale */
+    margin-block-start: var(--s1);
+  }
+
+  .center {
+    /* ↓ Remove padding from the width calculation */
+    box-sizing: content-box;
+    /* ↓ The maximum width is the maximum measure */
+    max-inline-size: 60ch;
+    /* ↓ Only affect horizontal margins */
+    margin-inline: auto;
+    /* ↓ Apply the minimum horizontal space */
+    padding-inline-start: var(--s1);
+    padding-inline-end: var(--s1);
+  }
+
+  .page {
+    max-inline-size: calc(var(--ratio) * 60ch);
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .cover {
+    display: flex;
+    flex-direction: column;
   }
 }
 

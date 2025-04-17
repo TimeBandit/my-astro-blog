@@ -9,7 +9,6 @@ import type { BlogPostCardProps } from "@/types";
 const { post } = Astro.props as {post: BlogPostCardProps};
 const { title, date, description, tags } = post.frontmatter;
 const { slug } = post;
-console.table({ title, date, description, tags, slug } )
 
 ---
 
