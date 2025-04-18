@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "Imran Nazir";
 export const SITE_DESCRIPTION =
-  "Freelance Web Develeoper For Hire. I build websites and web applications using modern technologies like Javascript, Typescript, React, Next.js, Tailwind CSS, and Astro. AWS Developer Certified.";
+  "Expert Freelance Web Developer For Hire | JavaScript, TypeScript, React & Next.js Specialist | AWS Certified Developer | Creating responsive, high-performance websites and web applications with modern technologies including Tailwind CSS and Astro. Transform your digital presence with professional custom web development services.";
 export const TWITTER_HANDLE = "@imrannazirmir";
 export const MY_NAME = "Imran Nazir";
 
