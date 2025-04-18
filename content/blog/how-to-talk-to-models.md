@@ -3,8 +3,8 @@ external: false
 draft: false
 title: How to Talk to Models
 description: How to Talk to Models
-url: https://www.imran-nazir.com/blog/20250406-how-to-talk-to-models.md
-image: https://www.imran-nazir.com/images/20250406-how-to-talk-to-models.md
+url: https://www.imran-nazir.com/blog/how-to-talk-to-models.md
+image: https://www.imran-nazir.com/images/how-to-talk-to-models.md
 imageAlt: A stylised HTMX logo graphic
 date: 2025-04-06
 tags: [llms, ai, machine-learning]
