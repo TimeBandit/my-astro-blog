@@ -5,6 +5,8 @@ import { defineConfig } from "astro/config";
 
 import react from "@astrojs/react";
 
+import compressor from "astro-compressor";
+
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
   In local development, your SEO meta tags will have localhost URL.
@@ -34,5 +36,5 @@ export default defineConfig({
   site: BASE_URL,
   integrations: [sitemap(), tailwind({
     config: { applyBaseStyles: false },
-  }), react()],
+  }), react(), compressor()],
 });
