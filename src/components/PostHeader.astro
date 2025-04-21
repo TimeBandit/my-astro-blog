@@ -1,8 +1,11 @@
 ---
+import ThemeToggle from "./ThemeToggle";
+
 const { title, date, tags } = Astro.props;
 ---
 
-<div class="bg-brutalist-blue py-10 mb-12">
+<div class="dark:text-brutalist-black bg-brutalist-blue py-10 mb-12">
+  <ThemeToggle client:only/>
   <div class="max-w-4xl mx-auto px-6">
     <button> ← Back</button>
     <h1 class="text-4xl md:text-6xl font-brutalist brutalist-text-shadow">

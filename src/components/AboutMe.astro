@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import profilePhoto from '../assets/profile-photo.png';
 ---
 <section class="brutalist-section reveal">
@@ -39,10 +39,9 @@ import profilePhoto from '../assets/profile-photo.png';
         <div
           class="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 border-4 border-black relative z-10 overflow-hidden"
         >
-        <Picture
+        <Image
         src={profilePhoto}
-        formats={["avif", "webp"]}
-        alt="A photo of Imran Nazir."
+        alt="Imran Nazir."
         class="w-full h-full object-cover"
         />
         </div>
