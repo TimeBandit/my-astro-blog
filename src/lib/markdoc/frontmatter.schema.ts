@@ -40,6 +40,7 @@ export const blogSchema = z.discriminatedUnion("external", [
         "external is true but url is missing. url must be set for posts marked as external.",
       invalid_type_error: "external should be string.",
     }),
+    description: z.optional(z.string()),
   }),
 ]);
 
