@@ -1,5 +1,8 @@
 {
-  "name": "blogster-sleek",
+  "name": "my-astro-site",
+  "author": {
+    "name": "Imran Nazir"
+  },
   "version": "0.0.1",
   "private": true,
   "scripts": {
