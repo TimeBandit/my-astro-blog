@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"); */
 
 @tailwind base;
 @tailwind components;
@@ -136,8 +136,9 @@
   }
 
   ul {
-    @apply list-disc list-inside;
+    @apply list-disc list-inside break-words;
   }
+
   ol {
     @apply list-decimal list-inside;
   }

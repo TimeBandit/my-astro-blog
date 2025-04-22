@@ -3,6 +3,7 @@ import Footer from "@components/Footer.astro";
 import "../styles/index.css"; // the new file created by loveable
 
 import Favicon from "./Favicon.astro";
+import GoogleFont from "./GoogleFont.astro";
 ---
 
 <!DOCTYPE html>
@@ -13,6 +14,7 @@ import Favicon from "./Favicon.astro";
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content="Astro" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <GoogleFont />
     <Favicon />
     <slot name="meta" />
     <!-- Google tag (gtag.js) -->
