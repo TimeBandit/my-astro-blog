@@ -1,5 +1,12 @@
 ---
 import ThemeToggle from "./ThemeToggle";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <div class="bg-brutalist-yellow py-6 sm:py-8 md:py-10 mb-8 sm:mb-10 md:mb-12">
@@ -8,14 +15,15 @@ import ThemeToggle from "./ThemeToggle";
     <h1
       class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-brutalist brutalist-text-shadow uppercase text-brutalist-black"
     >
-    Imran Nazir
+    {title}
       <!-- Pink Llama <span class="block">Digital Forge</span> -->
     </h1>
     <p
       class="text-xl sm:text-2xl mt-3 sm:mt-4 max-w-prose text-brutalist-black"
     >
-      Web development that delivers results for entrepreneurs and small
-      businesses.
+    {description}
+      <!-- Web development that delivers results for entrepreneurs and small
+      businesses. -->
     </p>
   </div>
 </div>

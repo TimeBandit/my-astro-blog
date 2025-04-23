@@ -20,13 +20,12 @@ const sortedPosts = posts
       new Date(a.frontmatter.date).valueOf()
   );
 
-const title = "Blog";
-const description =
-  "Insights, tutorials, and case studies from Pink Llama Software.";
+const title = "Case Studies";
+const description = "Check out detailed case studies of projects I've worked on delivering results for clients."
 ---
 
 <PageLayout>
-  <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
+  <PageMeta title={`Case Studies | ${SITE_TITLE}`} slot="meta" />
   <Header title={title} description={description} slot="header" />
   <BlogMain slot="main" posts={sortedPosts}/>
 </PageLayout>

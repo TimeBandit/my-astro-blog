@@ -1,13 +1,17 @@
 ---
-import IndexHeader from "@components/IndexHeader.astro";
+import Header from "@components/Header.astro";
 import IndexMain from "@components/IndexMain.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
+
+const title = "Imran Nazir";
+const description =
+  "Web development that delivers results for entrepreneurs and small businesses.";
 ---
 
 <PageLayout>
-  <PageMeta title={`${SITE_TITLE} | Web Dev`} slot="meta" />
-  <IndexHeader slot="header" />
+  <PageMeta title={`Home | ${SITE_TITLE}`} slot="meta" />
+  <Header title={title} description={description} slot="header" />
   <IndexMain slot="main" />
 </PageLayout>
