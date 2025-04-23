@@ -1,8 +1,8 @@
 ---
-import type { BlogPostCardProps } from "@/types";
-import BlogPostCard from "./BlogPostCard.astro";
+import type { PostCardProps } from "@/types";
+import Card from "./Card.astro";
 
-const {posts} = Astro.props as {posts: BlogPostCardProps[]};
+const {posts} = Astro.props as {posts: PostCardProps[]};
 ---
 
 <main class="flex-grow max-w-6xl mx-auto px-6">
@@ -11,7 +11,7 @@ const {posts} = Astro.props as {posts: BlogPostCardProps[]};
       {
         posts.map((post) => (
           <div class="reveal">
-            <BlogPostCard post={post} />
+            <Card post={post} />
           </div>
         ))
       }

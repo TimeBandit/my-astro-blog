@@ -1,5 +1,5 @@
 ---
-import BlogMain from "@components/BlogMain.astro";
+import Cards from "@components/Cards.astro";
 import Header from "@components/Header.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
@@ -28,7 +28,7 @@ const description =
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
   <Header title={title} description={description} slot="header" />
-  <BlogMain slot="main" posts={sortedPosts}/>
+  <Cards slot="main" posts={sortedPosts}/>
 </PageLayout>
 
 <script src="../lib/scrollReveal.ts"></script>

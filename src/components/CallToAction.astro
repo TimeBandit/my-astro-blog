@@ -1,25 +1,36 @@
-<section
-  class="brutalist-section reveal bg-brutalist-pink dark:bg-brutalist-pink"
->
-  <div class="text-center">
-    <h2
-      class="text-4xl md:text-5xl font-brutalist mb-6 uppercase text-brutalist-black dark:text-brutalist-black"
-    >
-      Let's Work Together
-    </h2>
-    <p
-      class="text-xl mb-8 max-w-prose mx-auto text-brutalist-black dark:text-brutalist-black"
-    >
-      Ready to take your business to the next level with custom software
-      solutions? Let's discuss how I can help you achieve your goals.
-    </p>
-    <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdD3pETz1ERcOPQYpDamjTTKQQ9zGc2UQfrsFlZe3Blzu9m4g/viewform?usp=dialog"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="brutalist-button inline-block text-xl"
-    >
-      Get In Touch
-    </a>
-  </div>
-</section>
+---
+const { title, description, buttonText } = Astro.props;
+
+interface Props {
+  title: string;
+  description: string;
+  buttonText: string;
+}
+---
+
+<div class="flex-grow max-w-6xl mx-auto px-6">
+  <section
+    class="brutalist-section reveal bg-brutalist-pink dark:bg-brutalist-pink"
+  >
+    <div class="text-center">
+      <h2
+        class="text-4xl md:text-5xl font-brutalist mb-6 uppercase text-brutalist-black dark:text-brutalist-black"
+      >
+        {title}
+      </h2>
+      <p
+        class="text-xl mb-8 max-w-prose mx-auto text-brutalist-black dark:text-brutalist-black"
+      >
+        {description}
+      </p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdD3pETz1ERcOPQYpDamjTTKQQ9zGc2UQfrsFlZe3Blzu9m4g/viewform?usp=dialog"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="brutalist-button inline-block text-xl"
+      >
+        {buttonText}
+      </a>
+    </div>
+  </section>
+</div>

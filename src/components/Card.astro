@@ -1,11 +1,10 @@
 ---
-import type { BlogPostCardProps } from "@/types";
+import type { PostCardProps } from "@/types";
 
-const { post } = Astro.props as { post: BlogPostCardProps };
+const { post } = Astro.props as { post: PostCardProps };
 const { title, date, description, tags } = post.frontmatter;
 const { slug } = post;
 ---
-
 <article
   class="border-4 border-brutalist-black p-6 brutalist-box-shadow bg-white dark:bg-brutalist-dark hover:translate-y-1 hover:translate-x-1 hover:shadow-[3px_3px_0_#000] transition-all"
 >
@@ -24,7 +23,7 @@ const { slug } = post;
   <p class="mb-4">{description}</p>
 
   <a
-    href={`/blog/${slug}`}
+    href={`${Astro.url.pathname}/${slug}`}
     class="inline-block font-bold py-2 px-4 border-2 border-brutalist-black bg-brutalist-blue text-brutalist-black hover:bg-brutalist-pink transition-colors"
   >
     Read More →

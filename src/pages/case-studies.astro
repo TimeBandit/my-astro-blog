@@ -1,15 +1,16 @@
 ---
-import BlogMain from "@components/BlogMain.astro";
+import CallToAction from "@components/CallToAction.astro";
+import Cards from "@components/Cards.astro";
 import Header from "@components/Header.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
-import { blogSchema } from "../lib/markdoc/frontmatter.schema";
+import { caseStudiesSchema } from "../lib/markdoc/frontmatter.schema";
 import { readAll } from "../lib/markdoc/read";
 
 const posts = await readAll({
-  directory: "blog",
-  frontmatterSchema: blogSchema,
+  directory: "case-studies",
+  frontmatterSchema: caseStudiesSchema,
 });
 
 const sortedPosts = posts
@@ -20,14 +21,20 @@ const sortedPosts = posts
       new Date(a.frontmatter.date).valueOf()
   );
 
-const title = "Case Studies";
-const description = "Check out detailed case studies of projects I've worked on delivering results for clients."
+const headerTitle = "Case Studies";
+const headerDescription = "Check out detailed case studies of projects I've worked on delivering results for clients."
+
+const ctaTitle = "Need Something Built?";
+const ctaDescription =
+  "I'm currently available for new projects. Let's discuss how I can help bring your ideas to life.";
+const ctaButtonText = "Start a Project";
 ---
 
 <PageLayout>
   <PageMeta title={`Case Studies | ${SITE_TITLE}`} slot="meta" />
-  <Header title={title} description={description} slot="header" />
-  <BlogMain slot="main" posts={sortedPosts}/>
+  <Header title={headerTitle} description={headerDescription} slot="header" />
+  <Cards slot="main" posts={sortedPosts}/>
+  <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/>
 </PageLayout>
 
 <script src="../lib/scrollReveal.ts"></script>
