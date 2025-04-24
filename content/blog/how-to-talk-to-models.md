@@ -12,7 +12,7 @@ tags: [llms, ai, machine-learning]
 
 ![Illustration](/images/how-to-talk-to-models.png)
 
-## Did You Know You Can Talk to LLMs Locally? (Seriously!)
+**Introduction**
 
 Okay, let's be honest. We've all spent way too much time staring at a screen, prompting massive language models like ChatGPT. But
 what if you could have a powerful LLM _right on your computer_, without relying on an internet connection or worrying about
@@ -23,7 +23,7 @@ We'll use the Gemma LLM for our examples – it's a great, open-source option th
 
 ---
 
-### Part 1: Getting Started with Ollama
+**Getting Started with Ollama**
 
 Ollama is, hands down, the easiest way to get an LLM running locally. It’s designed to be super simple, and it handles all the
 messy bits of downloading, setting up, and running the model.
@@ -70,7 +70,7 @@ LLMs.
 
 ---
 
-### Part 2: Adding a UI with OpenWebUI
+**Adding a UI with OpenWebUI**
 
 Okay, the command-line interface is functional, but let's be honest – it's not exactly user-friendly. That's where OpenWebUI comes
 in. OpenWebUI provides a beautiful, intuitive web interface for interacting with your locally running LLMs.

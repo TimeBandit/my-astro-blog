@@ -6,19 +6,21 @@ import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
 
-const headerTitle = "Imran Nazir";
-const headerDescription =
-  "Web development that delivers results for entrepreneurs and small businesses.";
+const headerProps = {
+  title: "Imran Nazir",
+  description: "Web development that delivers results for entrepreneurs and small businesses.",
+};
 
-const ctaTitle = "Lets work together";
-const ctaDescription =
-  "I help entrepreneurs and small businesses build their online presence and grow their business. Let's work together to achieve your goals.";
-const ctaButtonText = "Get in touch";
+const ctaProps = {
+  title: "Lets work together",
+  description: "I help entrepreneurs and small businesses build their online presence and grow their business. Let's work together to achieve your goals.",
+  buttonText: "Get in touch",
+};
 ---
 
 <PageLayout>
   <PageMeta title={`Home | ${SITE_TITLE}`} slot="meta" />
-  <Header title={headerTitle} description={headerDescription} slot="header" />
+  <Header {...headerProps} slot="header" />
   <Home slot="main" />
-  <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/>
+  <CallToAction {...ctaProps}/>
 </PageLayout>

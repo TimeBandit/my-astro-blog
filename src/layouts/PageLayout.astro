@@ -30,7 +30,9 @@ import GoogleFont from "./GoogleFont.astro";
       function gtag() {
         window.dataLayer.push(arguments);
       }
+      // @ts-ignore
       gtag("js", new Date());
+      // @ts-ignore
       gtag("config", "G-WDQPYRHTZG");
     </script></head
   >
@@ -38,8 +40,10 @@ import GoogleFont from "./GoogleFont.astro";
     <div class="stack">
       <slot name="header" />
       <slot name="main" />
+      <slot name="call-to-action" />
       <slot />
       <Footer />
     </div>
   </body>
+  <script src="../lib/scrollReveal.ts"></script>
 </html>

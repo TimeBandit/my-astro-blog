@@ -1,5 +1,6 @@
 ---
 import Renderer from "@components/Renderer.astro";
+
 const { description, content } = Astro.props;
 ---
 
@@ -12,8 +13,5 @@ const { description, content } = Astro.props;
       <Renderer content={content} />
     </div>
   </article>
-
-  <div class="text-center mt-12 mb-16">
-    <a href="/blog" class="brutalist-button inline-block"> Back to All Posts</a>
-  </div>
 </main>
+

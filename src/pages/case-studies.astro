@@ -1,16 +1,16 @@
 ---
-import CallToAction from "@components/CallToAction.astro";
-import Cards from "@components/Cards.astro";
+// import CallToAction from "@components/CallToAction.astro";
+// import Cards from "@components/Cards.astro";
 import Header from "@components/Header.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
-import { caseStudiesSchema } from "../lib/markdoc/frontmatter.schema";
+import { postSchema } from "../lib/markdoc/frontmatter.schema";
 import { readAll } from "../lib/markdoc/read";
 
 const posts = await readAll({
   directory: "case-studies",
-  frontmatterSchema: caseStudiesSchema,
+  frontmatterSchema: postSchema,
 });
 
 const sortedPosts = posts
@@ -29,12 +29,10 @@ const ctaDescription =
   "I'm currently available for new projects. Let's discuss how I can help bring your ideas to life.";
 const ctaButtonText = "Start a Project";
 ---
-
 <PageLayout>
   <PageMeta title={`Case Studies | ${SITE_TITLE}`} slot="meta" />
   <Header title={headerTitle} description={headerDescription} slot="header" />
-  <Cards slot="main" posts={sortedPosts}/>
-  <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/>
+  Coming Soon! 🚧
+  <!-- <Cards slot="main" posts={sortedPosts}/>
+  <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/> -->
 </PageLayout>
-
-<script src="../lib/scrollReveal.ts"></script>

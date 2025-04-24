@@ -1,17 +1,18 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import PostMain from "@/PostMain.astro";
 import BlogPostMeta from "@components/BlogPostMeta.astro";
 import PostHeader from "@components/PostHeader.astro";
+import PostMain from "@components/PostMain.astro";
 
+import LinkBack from "@components/LinkBack.astro";
 import { SITE_URL } from "../../config";
-import { blogSchema } from "../../lib/markdoc/frontmatter.schema";
+import { postSchema } from "../../lib/markdoc/frontmatter.schema";
 import { readAll, readOne } from "../../lib/markdoc/read";
 
 export async function getStaticPaths() {
   const posts = await readAll({
     directory: "blog",
-    frontmatterSchema: blogSchema,
+    frontmatterSchema: postSchema,
   });
 
   // we don't want to generate pages for posts that a to external websites
@@ -32,7 +33,7 @@ if (typeof slug !== "string") {
 const { content, frontmatter } = await readOne({
   directory: "blog",
   slug,
-  frontmatterSchema: blogSchema,
+  frontmatterSchema: postSchema,
 });
 
 const ogImageAbsoluteUrl =
@@ -46,7 +47,7 @@ const ogImageAbsoluteUrl =
     title={frontmatter.title}
     description={frontmatter.external ? undefined : frontmatter.description}
     publishDate={frontmatter.date.toISOString()}
-    pagePath={`/blog/${slug}`}
+    pagePath={`${Astro.url.pathname}`}
     ogImageAbsoluteUrl={ogImageAbsoluteUrl}
     slot="meta"
   />
@@ -61,4 +62,5 @@ const ogImageAbsoluteUrl =
     content={content}
     slot="main"
   />
+  <LinkBack />
 </PageLayout>

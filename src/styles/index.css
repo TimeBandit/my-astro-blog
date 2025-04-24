@@ -46,20 +46,9 @@
     --sidebar-border: 0 0% 0%;
     --sidebar-ring: 0 0% 0%;
 
-    /* Spacings */
-    --ratio: 1.5;
-    --s-5: calc(var(--s-4) / var(--ratio));
-    --s-4: calc(var(--s-3) / var(--ratio));
-    --s-3: calc(var(--s-2) / var(--ratio));
-    --s-2: calc(var(--s-1) / var(--ratio));
-    --s-1: calc(var(--s0) / var(--ratio));
-    --s0: 1rem;
-    --s1: calc(var(--s0) * var(--ratio));
-    --s2: calc(var(--s1) * var(--ratio));
-    --s3: calc(var(--s2) * var(--ratio));
-    --s4: calc(var(--s3) * var(--ratio));
-    --s5: calc(var(--s4) * var(--ratio));
-    --border-thin: var(--s-4);
+    /* Font stack fallbacks */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
   .dark {
@@ -113,10 +102,110 @@
     @apply scroll-smooth;
   }
 
-  p,
+  /* Primary heading - used for page titles and major sections */
+  h1 {
+    @apply font-sans font-bold
+           text-4xl sm:text-5xl lg:text-6xl  /* 36px -> 48px -> 60px */
+           leading-tight tracking-tight
+           mb-6 sm:mb-8 lg:mb-10
+           text-foreground;
+  }
+
+  /* Secondary heading - section headers */
+  h2 {
+    @apply font-sans font-semibold
+           text-3xl sm:text-4xl lg:text-5xl  /* 30px -> 36px -> 48px */
+           leading-tight tracking-tight
+           mb-4 sm:mb-6 lg:mb-8
+           text-foreground;
+  }
+
+  /* Tertiary heading - subsections */
+  h3 {
+    @apply font-sans font-semibold
+           text-2xl sm:text-3xl lg:text-4xl  /* 24px -> 30px -> 36px */
+           leading-snug tracking-normal
+           mb-3 sm:mb-4 lg:mb-6
+           text-foreground;
+  }
+
+  /* Body text - optimized for readability */
+  p {
+    @apply font-sans
+           text-base sm:text-lg lg:text-xl  /* 16px -> 18px -> 20px */
+           leading-relaxed
+           mb-4 sm:mb-6
+           text-foreground;
+  }
+
+  /* Lists - consistent with paragraph styling */
+  ul,
+  ol {
+    @apply font-sans
+           text-base sm:text-lg lg:text-xl
+           leading-relaxed
+           mb-4 sm:mb-6
+           ml-4 sm:ml-6;
+  }
+
+  /* List items - proper spacing between items */
+  li {
+    @apply mb-2 last:mb-0;
+  }
+
+  /* Unordered lists - custom bullets */
+  ul {
+    @apply list-disc list-outside
+           marker:text-primary;
+  }
+
+  /* Ordered lists - custom numerals */
+  ol {
+    @apply list-decimal list-outside;
+  }
+
+  /* h1 {
+    @apply text-5xl sm:text-6xl md:text-7xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+  } */
+
+  /* p,
   li {
     @apply max-w-prose mx-auto;
-    max-width: 65ch;
+    max-width: 75ch;
+  } */
+
+  /* Inline code - used within paragraphs and lists */
+  code {
+    @apply font-mono text-[0.9em] 
+           px-1.5 py-0.5 mx-0.5
+           rounded-md
+           bg-muted dark:bg-muted
+           text-primary dark:text-primary
+           border border-border dark:border-border
+           whitespace-nowrap;
+  }
+
+  /* Code blocks - when code is inside pre tags */
+  pre code {
+    @apply block p-4 mx-0
+           text-base sm:text-lg
+           whitespace-pre-wrap
+           overflow-x-auto
+           border-0
+           bg-transparent;
+  }
+
+  /* Pre tag styling */
+  pre {
+    @apply my-4 sm:my-6
+           rounded-lg
+           bg-muted dark:bg-muted
+           border border-border dark:border-border
+           overflow-hidden;
   }
 
   .brutalist-text-shadow {
@@ -135,12 +224,19 @@
     margin-top: 1.5rem;
   }
 
-  ul {
+  /* ul {
     @apply list-disc list-inside break-words;
   }
 
   ol {
     @apply list-decimal list-inside;
+  } */
+
+  p > a {
+    @apply text-brutalist-pink underline;
+  }
+  .brutalist-section > a:hover {
+    @apply text-brutalist-pink underline-offset-4;
   }
 
   .brutalist-button {
@@ -167,6 +263,14 @@
 
   .text-shadow-white {
     text-shadow: 3px 3px 0 #fff;
+  }
+
+  .prose-spacing {
+    @apply space-y-6 sm:space-y-8 lg:space-y-10;
+  }
+
+  .prose-compact {
+    @apply space-y-4 sm:space-y-6 lg:space-y-8;
   }
 }
 
@@ -244,14 +348,14 @@
   .brutalist-marker {
     @apply text-2xl sm:text-3xl;
   }
-
+  /* 
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl;
   }
 
   h2 {
     @apply text-3xl sm:text-4xl;
-  }
+  } */
 
   .text-shadow-black,
   .text-shadow-white {

@@ -4,12 +4,12 @@ import Header from "@components/Header.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
-import { blogSchema } from "../lib/markdoc/frontmatter.schema";
+import { postSchema } from "../lib/markdoc/frontmatter.schema";
 import { readAll } from "../lib/markdoc/read";
 
 const posts = await readAll({
   directory: "blog",
-  frontmatterSchema: blogSchema,
+  frontmatterSchema: postSchema,
 });
 
 const sortedPosts = posts
@@ -30,5 +30,3 @@ const description =
   <Header title={title} description={description} slot="header" />
   <Cards slot="main" posts={sortedPosts}/>
 </PageLayout>
-
-<script src="../lib/scrollReveal.ts"></script>
