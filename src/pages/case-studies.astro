@@ -1,6 +1,6 @@
 ---
-// import CallToAction from "@components/CallToAction.astro";
-// import Cards from "@components/Cards.astro";
+import CallToAction from "@components/CallToAction.astro";
+import Cards from "@components/Cards.astro";
 import Header from "@components/Header.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
@@ -32,7 +32,7 @@ const ctaButtonText = "Start a Project";
 <PageLayout>
   <PageMeta title={`Case Studies | ${SITE_TITLE}`} slot="meta" />
   <Header title={headerTitle} description={headerDescription} slot="header" />
-  Coming Soon! 🚧
-  <!-- <Cards slot="main" posts={sortedPosts}/>
-  <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/> -->
+  <!-- Coming Soon! 🚧 -->
+  <Cards slot="main" posts={sortedPosts}/>
+  <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/>
 </PageLayout>
