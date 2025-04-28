@@ -20,7 +20,7 @@ Partnering with [Hullabalook](https://www.hullabalook.com/) (HBL)—experts in v
 
 In this case study, I’ll take you behind the scenes of how we made it all happen—from the backend plumbing to the slick front-end user experience. This is the kind of fullstack, cloud-first development work I love delivering as a freelance developer.
 
-# The Challenge
+## The Challenge
 
 Buying furniture online isn’t easy. Customers needed a better way to _visualize_ what products would look like in their homes before hitting "Add to Basket."
 
@@ -28,14 +28,14 @@ The solution? [Room Planner](https://www.hullabalook.com/products/room-creator-m
 
 The client wanted this powerful feature embedded into their site—but without slowing anything down or adding technical risk on the backend.
 
-# The Solution
+## The Solution
 
 We delivered the project in two parts:
 
 - **Backend**: A pipeline to send Hullabalook fresh product data every day.
 - **Frontend**: Embedding Hullabalook’s experience directly into the client’s category pages, and connecting it seamlessly to the shopping basket.
 
-## Backend: Building the Pipeline
+### Building the Pipeline
 
 First things first: Hullabalook needed product data.
 
@@ -59,7 +59,7 @@ The Lambda pulled the latest product data, validated it, and posted it to an S3 
 
 Beautifully simple.
 
-## Frontend: Embedding the Room Planner
+### Frontend: Embedding the Room Planner
 
 Now for the fun part: plugging Hullabalook’s Room Planner directly into the client’s site.
 
@@ -93,7 +93,7 @@ window.addEventListener("message", async ({ data }) => {
 
 Boom—seamless data transfer. Customers could easily add their curated "room" straight into their shopping cart.
 
-### Technical Highlights
+## Technical Highlights
 
 - Security First: IAM roles with strict least privilege. S3 buckets locked down with tight access policies and smart lifecycle management.
 - Performance Boost: The iframe was lazy-loaded to ensure no unnecessary load on initial page render.
@@ -105,6 +105,6 @@ The Results
 - ✅ Improved bounce rates from product detail pages.
 - ✅ Zero reported performance issues post-launch.
 
-### Final Thoughts
+## Final Thoughts
 
 This project is a textbook example of how thoughtful fullstack development, backed by modern cloud infrastructure, can open up incredible new user experiences—without compromising speed, security, or scalability.
