@@ -2,6 +2,7 @@
 import CallToAction from "@components/CallToAction.astro";
 import Cards from "@components/Cards.astro";
 import Header from "@components/Header.astro";
+import LinkBack from "@components/LinkBack.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 import PageLayout from "../layouts/PageLayout.astro";
@@ -35,4 +36,5 @@ const ctaButtonText = "Start a Project";
   <!-- Coming Soon! 🚧 -->
   <Cards slot="main" posts={sortedPosts}/>
   <CallToAction title={ctaTitle} description={ctaDescription} buttonText={ctaButtonText}/>
+  <LinkBack path="/"/>
 </PageLayout>
