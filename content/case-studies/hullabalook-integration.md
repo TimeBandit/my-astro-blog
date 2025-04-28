@@ -53,7 +53,7 @@ Our goals for the pipeline were clear:
 
 ![Solution Architecture](/images/hullabalook-integration/achitecture-diagram.svg)
 
-Instead ofa running expensive, always-on resources, we went _serverless_. We built an AWS Lambda function triggered by EventBridge on a daily schedule.
+Instead of running expensive, always-on resources, we went _serverless_. We built an AWS Lambda function triggered by EventBridge on a daily schedule.
 
 The Lambda pulled the latest product data, validated it, and posted it to an S3 bucket—all automatically. We even used Lambda’s temporary storage ( /tmp ) to manage the data file during execution before shipping it to S3. Zero servers. Minimal overhead and resource usage.
 

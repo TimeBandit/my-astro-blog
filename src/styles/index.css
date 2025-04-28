@@ -248,6 +248,15 @@
            active:shadow-none;
   }
 
+  .brutalist-button--light {
+    @apply font-bold py-2 sm:py-3 px-4 sm:px-6 border-4 border-brutalist-black dark:border-brutalist-white 
+           text-brutalist-black brutalist-box-shadow 
+           hover:translate-y-1 hover:translate-x-1 
+           hover:shadow-[3px_3px_0_#000] dark:hover:shadow-[3px_3px_0_#fff] transition-all
+           active:translate-y-2 active:translate-x-2 
+           active:shadow-none;
+  }
+
   .brutalist-marker {
     @apply font-brutalist text-3xl sm:text-4xl md:text-6xl 
           text-brutalist-pink brutalist-text-shadow
