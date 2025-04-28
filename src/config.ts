@@ -1,9 +1,10 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Imran Nazir";
+export const SITE_TITLE =
+  "Work With a Freelance Developer | React, Node.js & AWS ";
 export const SITE_DESCRIPTION =
-  "Expert Freelance Web Developer For Hire | JavaScript, TypeScript, React & Next.js Specialist | AWS Certified Developer | Creating responsive, high-performance websites and web applications with modern technologies including Tailwind CSS and Astro. Transform your digital presence with professional custom web development services.";
+  "Expert freelance web developer specializing in React, Node.js, and AWS. I build fast, scalable websites and apps tailored to your business needs. Let's work together.";
 export const TWITTER_HANDLE = "@imrannazirmir";
 export const MY_NAME = "Imran Nazir";
 
